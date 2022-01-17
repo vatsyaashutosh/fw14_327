@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <body>
+    <!--DO NOT CHANGE THIS ID's-->
+
+    <div id="container">
+      <div id="sidebar">
+        <!--add your sidebar component here-->
+      </div>
+
+      <div id="main">
+       
+      </div>
+    </div>
+    <script type="module">
+       import sidebar from "./components/sidebar.js"
+      import { apiCall, appendArticles } from "./scripts/main.js"
+      let sb=document.querySelector("#sidebar");
+sb.innerHTML=sidebar();
+      let main=document.querySelector("#main");
+
+      var today=document.querySelector("#searchbar");
+      let abc=localStorage.getItem("search_tearm");
+      let url=`https://gnews.io/api/v4/search?q=${abc}&token=c0bb2863a6b1ea182ebf146dbb4439d0&lang=en&country=in`
+      let response=apiCall(url)
+     
+      response.then((res)=>{
+        let arr=res.articles
+        console.log(arr);
+       appendArticles(arr,main);
+
+      })
+      let button=document.querySelector("#sc")
+      button.addEventListener("click",tc)
+
+     function tc(){
+
+   
+    }
+    </script>
+  </body>
+
+</html>
