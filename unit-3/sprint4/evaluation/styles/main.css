@@ -25,3 +25,7 @@ overflow: scroll;
 #main div{
     text-align: center;
 }
+#main{
+    margin: auto;
+    text-align: center;
+}

@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
 
   <body>
@@ -17,34 +18,60 @@
       </div>
 
       <div id="main">
-       
+        <div id="headline">
+          <!--add headline here-->
+        </div>
+        <img id="img" src="" alt="" />
+        <!--show news image here-->
+
+
+        <div id="content">
+          <!--add news content here-->
+        </div>
       </div>
     </div>
+  </body>
+
     <script type="module">
        import sidebar from "./components/sidebar.js"
       import { apiCall, appendArticles } from "./scripts/main.js"
       let sb=document.querySelector("#sidebar");
 sb.innerHTML=sidebar();
       let main=document.querySelector("#main");
-
-      var today=document.querySelector("#searchbar");
-      let abc=localStorage.getItem("search_tearm");
-      let url=`https://gnews.io/api/v4/search?q=${abc}&token=c0bb2863a6b1ea182ebf146dbb4439d0&lang=en&country=in`
-      let response=apiCall(url)
+     let obj= JSON.parse(localStorage.getItem("article"))
+     console.log(obj)
+     let img=document.querySelector("#img");
      
-      response.then((res)=>{
-        let arr=res.articles
-        console.log(arr);
-       appendArticles(arr,main);
+     let content=document.querySelector("#content");
+     let headline=document.querySelector("#headline");
+     let h1=document.createElement("h1");
+      img.src=obj.img1;
+      content.textContent=obj.content1;
+      h1.textContent=obj.title1;
+      headline.append(h1)
+      img.append(img)
+     
+      
+      
 
-      })
-      let button=document.querySelector("#sc")
-      button.addEventListener("click",tc)
+    //   var today=document.querySelector("#searchbar");
+    //   let abc=localStorage.getItem("search_tearm");
+    //   let url=`https://gnews.io/api/v4/search?q=${abc}&token=de18c5604cc0de505c5f7928a05e8bc5&lang=en&country=in`
+    //   let response=apiCall(url)
+     
+    //   response.then((res)=>{
+    //     let arr=res.articles
+    //     console.log(arr);
+    //    appendArticles(arr,main);
 
-     function tc(){
+    //   })
+    //   let button=document.querySelector("#sc")
+    //   button.addEventListener("click",tc)
+
+    //  function tc(){
 
    
-    }
+    // }
     </script>
   </body>
 

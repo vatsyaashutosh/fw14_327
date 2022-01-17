@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./styles/main.css">
   </head>
 
   <body>
@@ -29,7 +30,7 @@
       var today=document.querySelector("#searchbar");
       let abc=localStorage.getItem("search_tearm");
       console.log(abc)
-      let url=`https://gnews.io/api/v4/search?q=${abc}&token=c0bb2863a6b1ea182ebf146dbb4439d0&lang=en&country=in`
+      let url=`https://gnews.io/api/v4/search?q=${abc}&token=de18c5604cc0de505c5f7928a05e8bc5&lang=en&country=in`
       let response=apiCall(url)
      
       response.then((res)=>{

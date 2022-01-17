@@ -27,7 +27,25 @@ function appendArticles(articles, main) {
         p2.innerText=content;
         h3.innerText=title;
         div.append(h3,img,p1);
+        var obj={
+            content1:content,
+            img1:image,
+            title1:title
+
+        }
+        // console.log(obj)
+       
+        div.addEventListener("click",show)
+        function show(){
+            
+                console.log(obj)
+               localStorage.setItem("article", JSON.stringify(obj))
+                window.location.href="./news.html"
+    
+            
+        }
         main.append(div);
+
     });
 
 }
