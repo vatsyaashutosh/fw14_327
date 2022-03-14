@@ -1,0 +1,16 @@
+{
+  "houses": [
+    {
+      "name": "Ashutosh Vatsya",
+      "ownerName": "erd",
+      "address": "C-1133 LIG FLATS EAST OF LONI ROAD Delhi-110093",
+      "areaCode": "23",
+      "rent": "342",
+      "preferredTenant": "",
+      "image": "dfs",
+      "bachelor": "on",
+      "married": "on",
+      "id": 1
+    }
+  ]
+}
