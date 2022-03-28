@@ -1,0 +1,53 @@
+{
+  "users": [
+    {
+      "name": "omkar",
+      "password": "1234",
+      "location": "mumbai",
+      "interests": [
+        "technology",
+        "movies"
+      ],
+      "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      "subscribed": [
+        3,
+        1,
+        1
+      ],
+      "id": 1,
+      "status": true
+    }
+  ],
+  "meetups": [
+    {
+      "title": "demo",
+      "location": "kolkata",
+      "date": "2020-12-08",
+      "time": "12:13",
+      "theme": "movies",
+      "description": "demo",
+      "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      "id": 1
+    },
+    {
+      "title": "demo 1234",
+      "location": "mumbai",
+      "date": "2020-12-08",
+      "time": "12:13",
+      "theme": "movies",
+      "description": "demo",
+      "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      "id": 2
+    },
+    {
+      "title": "dmoe3hioho",
+      "location": "mumbai",
+      "date": "2020-04-04",
+      "time": "04:50",
+      "theme": "food",
+      "description": "ddsdsf",
+      "image": "https://cdn-icons-png.flaticon.com/512/149/149071.png",
+      "id": 3
+    }
+  ]
+}
